@@ -2,11 +2,12 @@
 
 <<info
 This shell script will take periodic backups
-
+can also be used for prompt
 eg.
 ./backup.sh <source path> <detstination>
 scr /home/ubuntu/scripts
 dest /home/ubuntu/backups
+
 info
 
 src=$1
