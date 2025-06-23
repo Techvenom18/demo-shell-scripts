@@ -1,0 +1,72 @@
+// QuoteApp.java
+import java.util.Scanner;
+
+public class QuoteApp {
+    public static void main(String[] args) {
+        String[] quotes = {
+            "The only limit to our realization of tomorrow is our doubts of today. – F.D. Roosevelt",
+            "Success is not final, failure is not fatal: it is the courage to continue that counts. – Winston Churchill",
+            "Believe you can and you're halfway there. – Theodore Roosevelt",
+            "Do what you can, with what you have, where you are. – Theodore Roosevelt",
+            "In the middle of every difficulty lies opportunity. – Albert Einstein",
+            "It does not matter how slowly you go as long as you do not stop. – Confucius",
+            "Act as if what you do makes a difference. It does. – William James",
+            "The best way to get started is to quit talking and begin doing. – Walt Disney",
+            "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
+            "If you're going through hell, keep going. – Winston Churchill",
+            "Everything you’ve ever wanted is on the other side of fear. – George Addair",
+            "Dream big and dare to fail. – Norman Vaughan",
+            "Hardships often prepare ordinary people for an extraordinary destiny. – C.S. Lewis",
+            "What lies behind us and what lies before us are tiny matters compared to what lies within us. – Ralph Waldo Emerson",
+            "You are never too old to set another goal or to dream a new dream. – C.S. Lewis",
+            "I can, therefore I am. – Simone Weil",
+            "The harder the conflict, the more glorious the triumph. – Thomas Paine",
+            "Turn your wounds into wisdom. – Oprah Winfrey",
+            "It always seems impossible until it’s done. – Nelson Mandela",
+            "Start where you are. Use what you have. Do what you can. – Arthur Ashe",
+            "Don’t wait. The time will never be just right. – Napoleon Hill",
+            "Action is the foundational key to all success. – Pablo Picasso",
+            "A year from now you may wish you had started today. – Karen Lamb",
+            "Quality means doing it right when no one is looking. – Henry Ford",
+            "Perseverance is failing 19 times and succeeding the 20th. – Julie Andrews",
+            "Success usually comes to those who are too busy to be looking for it. – Henry David Thoreau",
+            "Don’t be pushed around by the fears in your mind. Be led by the dreams in your heart. – Roy T. Bennett",
+            "Courage doesn’t always roar. Sometimes courage is the quiet voice at the end of the day saying, ‘I will try again tomorrow.’ – Mary Anne Radmacher",
+            "There is nothing impossible to they who will try. – Alexander the Great",
+            "Try to be a rainbow in someone’s cloud. – Maya Angelou",
+            "You miss 100% of the shots you don't take. – Wayne Gretzky",
+            "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+            "Small deeds done are better than great deeds planned. – Peter Marshall",
+            "With the new day comes new strength and new thoughts. – Eleanor Roosevelt",
+            "You don’t have to be great to start, but you have to start to be great. – Zig Ziglar",
+            "The secret of getting ahead is getting started. – Mark Twain",
+            "Go confidently in the direction of your dreams! Live the life you’ve imagined. – Henry David Thoreau",
+            "If opportunity doesn’t knock, build a door. – Milton Berle",
+            "Be not afraid of going slowly, be afraid only of standing still. – Chinese Proverb",
+            "Don’t let what you cannot do interfere with what you can do. – John Wooden",
+            "Failure will never overtake me if my determination to succeed is strong enough. – Og Mandino",
+            "Well done is better than well said. – Benjamin Franklin",
+            "You are braver than you believe, stronger than you seem, and smarter than you think. – A.A. Milne",
+            "What you get by achieving your goals is not as important as what you become by achieving your goals. – Zig Ziglar",
+            "Push yourself, because no one else is going to do it for you.",
+            "Doubt kills more dreams than failure ever will. – Suzy Kassem",
+            "Stay away from those people who try to disparage your ambitions. – Mark Twain",
+            "The secret of change is to focus all of your energy not on fighting the old, but on building the new. – Socrates",
+            "Keep your face always toward the sunshine—and shadows will fall behind you. – Walt Whitman"
+        };
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("✨ Motivational Quotes ✨\nPress [Enter] to see each one...\n");
+
+        for (int i = 0; i < quotes.length; i++) {
+            System.out.println("Quote " + (i + 1) + ": " + quotes[i]);
+            if (i != quotes.length - 1) {
+                System.out.print("Press [Enter] for next quote...");
+                scanner.nextLine();
+            } else {
+                System.out.println("\n🎉 End of Quotes!");
+            }
+        }
+        scanner.close();
+    }
+}
