@@ -18,8 +18,12 @@ build_job:
 Test_job:
     stage: Test
     script:
-        - echo "This is testing of out by developer"
-
+        - echo "This build for $DockerHub_user"
+        - echo "These are my test results" > logs/app.log
+    artifacts:
+        paths:
+            - logs/
+        expire_in: 1 week
 
 push_job:
     stage: push
