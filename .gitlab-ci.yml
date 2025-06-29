@@ -1,49 +1,46 @@
 stages:
-    
-    - build
-    - Test
-    - push
-    - deploy
+  - build
+  - Test
+  - push
+  - deploy
 
 variables:
-    bit: "production"
-    sun: "this-is-g.o.a.t"
+  deploy_env: "production"
+  sumit: "this-is-g.o.a.t"
+  DockerHub_user: "your-docker-username"  # Define your variable here
 
 build_job:
-    stage: build
-    script:
-        - echo "This build for $bit"
+  stage: build
+  script:
+    - echo "This build is for $DockerHub_user"
+    - mkdir -p logs
+    - echo "These are my test results" > logs/app.log
+  artifacts:
+    paths:
+      - logs/
+    expire_in: 1 week
 
+test_job:
+  stage: Test
+  script:
+    - echo "This is testing output by developer"
 
-Test_job:
-    stage: Test
-    script:
-        - echo "This build for $DockerHub_user"
-        - echo "These are my test results" > logs/app.log
-    artifacts:
-        paths:
-            - logs/
-        expire_in: 1 week
+dev_test_job:
+  stage: Test
+  script:
+    - echo "This is testing for dev"
+
+prd_test_job:
+  stage: Test
+  script:
+    - echo "This is testing for prd"
 
 push_job:
-    stage: push
-    script: 
-        - echo "This is push on remote server"
-
+  stage: push
+  script:
+    - echo "This is a push to the remote server"
 
 deploy_job:
-    stage: deploy
-    script:
-        - echo "deployment is $sun"
-
-
-dev_Test_job:
-    stage: Test
-    script:
-        - echo "This is testing for dev"
-
-
-prd_Test_job:
-    stage: Test
-    script:
-        - echo "This is testing for prd"
+  stage: deploy
+  script:
+    - echo "Deployment is $sumit"
