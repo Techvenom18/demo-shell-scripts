@@ -1,0 +1,45 @@
+stages:
+    
+    - build
+    - Test
+    - push
+    - deploy
+
+variables:
+    bit: "production"
+    sun: "this-is-g.o.a.t"
+
+build_job:
+    stage: build
+    script:
+        - echo "This build for $bit"
+
+
+Test_job:
+    stage: Test
+    script:
+        - echo "This is testing of out by developer"
+
+
+push_job:
+    stage: push
+    script: 
+        - echo "This is push on remote server"
+
+
+deploy_job:
+    stage: deploy
+    script:
+        - echo "deployment is $sun"
+
+
+dev_Test_job:
+    stage: Test
+    script:
+        - echo "This is testing for dev"
+
+
+prd_Test_job:
+    stage: Test
+    script:
+        - echo "This is testing for prd"
